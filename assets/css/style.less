@@ -1,0 +1,127 @@
+@dark-brown: #6B3513;
+@max-width: 960px;
+@body-font: Lora,georgia,times,serif;
+
+@columns: 16;
+@column-width: 40;
+@gutter-width: 20;
+@column-padding: 0;
+
+
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix() {
+	*zoom:1;
+	
+	&:before,
+	&:after {
+	    content:"";
+	    display:table;
+	}
+	&:after {
+	    clear:both;
+	}
+}
+
+/* Some basic settings and resets */
+
+body{
+	background-image: url(../images/wood-bg6.jpg);
+	color: #222222;
+	font-family: @body-font;
+	font-size: 100%;
+	margin: 0;}
+
+article,aside,footer,header,nav,section {
+	display: block;}
+	
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;}
+
+h1 {
+	color: #555555;
+	font-size: 1.5em;
+	margin: 0 0 0.8em 0;}
+	
+h2 {
+	background-color: #585858;
+	color: #ffffff;
+	font-size: 1.1em;
+	padding: 0.25em 0.4em;
+	position: relative;
+	z-index: 2;}
+	
+p {
+	font-size: 90%;
+	line-height: 1.5em;
+	margin: 0 0 1.5em 0;}
+
+/* Standard text link colours */
+a {
+	border-bottom: 1px solid #8A461C;
+	color: #8A461C;
+	padding-bottom: 0.05em;
+	text-decoration: none;}
+	
+a:hover {
+	background-color: #EDD6C7;
+	background-color: #F5E9E1;
+	background-color: #F7EEE6;
+	color: #6B3513;}
+	
+	
+#document {
+	background-color: #fcfcfc;
+	margin: 1em auto;}
+	
+#site-header {}
+	
+#site-title {
+	color: #6B3513;
+	font-size: 2em;
+	font-weight: normal;
+	line-height: 1.1;
+	margin-bottom: 0.5em;
+	padding-top: 0.5em;}
+	
+#site-title-descriptor {
+	color: #888888;
+	display: block;
+	font-size: 70%;
+	font-weight: bold;}
+	
+#hcard-Dan-Crabb {
+	display: none;}
+	
+#hcard-Dan-Crabb .type, #hcard-Dan-Crabb .fn, #hcard-Dan-Crabb .addressDivider {
+	display: none;}
+	
+#hcard-Dan-Crabb a {
+	border-bottom: none;
+	text-decoration: none;}
+	
+#site-nav {
+	border-top: 1px solid @dark-brown;
+	border-bottom: 1px solid @dark-brown;
+	clear: both;
+	margin: 1em 0 1em 0;
+	overflow: hidden;
+	padding: 0.5em 0 0.5em 0;}
+	
+	
+/* Styles for bigger screens */
+//@media only screen and (min-width: 800px){
+	h2 {
+		background-color: inherit;
+		color: #555555;
+		display: inline-block;}
+		
+	.service-section {
+		clear: both;}
+		
+	.service-thumbnails{
+		float: left;}
+		
+		
+		
+	//}

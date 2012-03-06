@@ -1,0 +1,74 @@
+/////////////////
+// Semantic.gs // for LESS: http://lesscss.org/
+/////////////////
+
+// Defaults which you can freely override
+@column-width: 60;
+@gutter-width: 20;
+@columns: 12;
+@column-padding: 5;
+
+// Utility variable — you should never need to modify this
+@_gridsystem-width: (@column-width*@columns) + (@gutter-width*@columns) * 1px;
+
+// Set @total-width to 100% for a fluid layout
+@total-width: @_gridsystem-width;
+
+
+//////////
+// GRID //
+//////////
+
+body {
+	width: 100%;
+	.clearfix;
+}
+
+
+
+.row(@columns:@columns) {
+	display: inline-block;
+	width: @total-width*((@gutter-width + @_gridsystem-width)/@_gridsystem-width);
+	margin: 0 @total-width*(((@gutter-width*.5)/@_gridsystem-width)*-1);
+	.clearfix;
+}
+.column(@x,@columns:@columns) {
+	display: inline;
+	float: left;
+	@col-width: @column-width + (@column-padding*2);
+	
+	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @_gridsystem-width);
+	//width: ((@total-width*((((@gutter-width+@column-width)*@x)-@gutter-width)) - @x*@column-padding*2) / @_gridsystem-width);
+	//width: (@total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) - @column-padding*2) / @_gridsystem-width);
+	margin: 0 @total-width*((@gutter-width*.5)/@_gridsystem-width);
+	padding: 0 @total-width*((@column-padding)/@_gridsystem-width) 0 @total-width*((@column-padding)/@_gridsystem-width);
+}
+.offset(@offset:1) {
+	margin-left: (@gutter-width+@column-width)*@offset + @total-width*((@gutter-width*.5)/@_gridsystem-width);
+}
+
+.offsetTest(@offset:1){
+	//margin-left: (@total-width*((((@gutter-width+@column-width)*@offset)-@gutter-width)) / @_gridsystem-width);
+	//margin-left: (@total-width*((((@gutter-width+@column-width)*@offset)+(@gutter-width/2))) / @_gridsystem-width);
+	margin-left: (((@gutter-width/2) + (@column-width + @gutter-width))/@total-width)*@_gridsystem-width;
+}
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix() {
+	*zoom:1;
+	
+	&:before,
+	&:after {
+	    content:"";
+	    display:table;
+	}
+	&:after {
+	    clear:both;
+	}
+}
+
+.push(@offset:1) {
+	margin-left: @total-width*(((@gutter-width+@column-width)*@offset) / @_gridsystem-width) + @total-width*((@gutter-width*.5)/@_gridsystem-width);
+}
+.pull(@offset:1) {
+	margin-right: @total-width*(((@gutter-width+@column-width)*@offset) / @_gridsystem-width) + @total-width*((@gutter-width*.5)/@_gridsystem-width);
+}

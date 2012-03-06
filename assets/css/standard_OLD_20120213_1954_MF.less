@@ -1,0 +1,174 @@
+@import 'common.less';
+@max-width: 960;
+@gutter-width: 20;
+@column-width: 40;
+
+// Some padding on header, footer and main content
+#site-header, #site-footer, #main-content {
+	margin: 0 auto 0 auto;
+	max-width: @max-width * 1px;
+	//padding: 0 5% 0 5%;
+	//padding-right: (10/960)*100%;
+	//padding-left: (10/960)*100%;
+	//@gutter: (@gutter-width/960)*100%;
+	//padding-right: @gutter/2;
+	//padding-left: @gutter/2;
+	//width: 100% - @gutter;
+	}
+	
+#main-content {
+	//background-color: #eaeaea;
+	}
+
+#site-header {
+	/*padding-right: (10/960)*100%;
+	padding-left: (10/960)*100%;*/
+	//width: ((@max-width - @gutter-width)/@max-width)*100%;
+	//max-width: (@max-width - @gutter-width)*1px;
+	overflow: hidden;}
+	
+#site-title {
+	margin-left: ((@gutter-width/2)/@max-width)*100%;
+	float: left;}
+	
+#site-nav-container {
+	margin: 0 auto 0 auto;
+	max-width: @max-width * 1px;
+	//padding-right: (10/960)*100%;
+	//padding-left: (10/960)*100%;
+	}
+	
+#site-nav-list {
+	padding-right: (10/960)*100%;
+	padding-left: (10/960)*100%;}
+	
+#hcard-Dan-Crabb{
+	color: #555555;
+	float: right;
+	font-size: 85%;
+	margin-right: ((@gutter-width/2)/@max-width)*100%;
+	padding-top: 4.1em;}
+	
+#hcard-Dan-Crabb abbr {
+	color: @brown;
+	font-weight: bold;}
+	
+#hcard-Dan-Crabb a {
+	color: #555555;}
+	
+#hcard-Dan-Crabb .addressDivider {
+	color: #cccccc;}
+	
+h1 {
+	border-bottom: 1px solid #cccccc;
+	color: #555555;
+	font-size: 1.8em;
+	font-style: normal;
+	font-weight: normal;
+	margin: 0 0 0.5em 0;
+	padding-bottom: 0.2em;}
+	
+.service-intro {
+	@gutter: (@gutter-width/@max-width)*100%;
+	margin-right: @gutter/2;
+	margin-left: @gutter/2;}
+	
+.service-intro p {
+	//font-size: 1em;
+	}
+
+.service-section {
+	//background-color: #dddddd;
+	clear: both;
+	margin-bottom: 1.5em;
+	@gutter: (@gutter-width/@max-width)*100%;
+	margin-right: @gutter/2;
+	margin-left: @gutter/2;	
+	overflow: hidden;}
+	
+.service-image {
+	@target: 400;
+	@context: @max-width - @gutter-width;
+	@width: (@target/@context) * 100%;
+	@padding: (0.5/@target) * 100%;
+	@w: @width - (@padding*2);
+	background-color: #dddddd;
+	float: left;
+	margin-right: (@gutter-width/@context)*100%;
+	padding: @padding;
+	width: @w;}
+	
+.service-image img {
+	@target: 399;
+	@context: 400;
+	@max-width: (@target/@context)*100%;
+	@padding: (8/@target) * 100%;
+	background-color: #ffffff;
+	@mw: @max-width - (@padding*2);
+	display: block;
+	margin: auto;
+	max-width: @mw;
+	padding: @padding;}
+	
+.service-description {
+	@context: @max-width - @gutter-width;
+	float: left;
+	width: ((@context - (400 + @gutter-width))/@context) * 100%;}
+	
+.service-section h2 {
+	color: @brown;
+	display: inline-block;
+	@context: @max-width - @gutter-width;
+	@width: ((@context - (400 + @gutter-width))/@context) * 100%;
+	margin-bottom: 0.8em;
+	width: @width;}
+
+.gallery-intro {
+	padding-right: (10/960)*100%;
+	padding-left: (10/960)*100%;}
+	
+.gallery {
+	clear: both;
+	margin-bottom: 2em;
+	padding-right: (10/960)*100%;
+	padding-left: (10/960)*100%;
+	overflow: hidden;}
+	
+.gallery-thumbnail {
+	@target: (@column-width*4)+(@gutter-width*3);
+	@context: @max-width - @gutter-width;
+	@margin: (@gutter-width/@context)*100%;
+	//display: inline-block;
+	cursor: -moz-zoom-in, -webkit-zoom-in;	
+	float: left;
+	/*min-height: 245px;	*/
+	//min-height: 200px;
+	margin-top: 0;
+	margin-right: @margin;
+	margin-bottom: @margin;
+	margin-left: 0;
+	padding: 0;
+	position: relative;
+	vertical-align: top;
+	width: (@target/@context)*100%;}
+	
+.gallery-thumbnail.last, .gallery figure:nth-child(4n+4) {
+	margin-right: 0;}
+	
+.gallery-thumbnail figcaption {
+	background-color: #585858;
+	color: #ffffff;
+	//display: none;
+	display: none;
+	font-size: 90%;
+	left: 0;
+	padding: 0.4em;
+	position: absolute;
+	top: 0;
+	opacity: 0.95;
+	width: 96%;}
+	
+.gallery-thumbnail img {
+	display: block;
+	max-width: 100%;
+	width: 100%;}

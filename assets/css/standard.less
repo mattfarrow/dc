@@ -1,0 +1,305 @@
+@import 'common.less';
+@max-width: 960;
+@gutter-width: 20;
+@column-width: 40;
+
+#small {
+	display: none;}
+
+#standard {
+	display: inline;}
+
+// Apply style to the test element to show that it's the standard size
+#test {
+	text-align: right;}
+
+
+// Some padding on header, footer and main content
+#site-header, #site-footer, #main-content {
+	margin: 0 auto 0 auto;
+	max-width: @max-width * 1px;
+	//padding: 0 5% 0 5%;
+	//padding-right: (10/960)*100%;
+	//padding-left: (10/960)*100%;
+	//@gutter: (@gutter-width/960)*100%;
+	//padding-right: @gutter/2;
+	//padding-left: @gutter/2;
+	//width: 100% - @gutter;
+	}
+	
+#main-content {
+	//background-color: #eaeaea;
+	}
+
+#site-header {
+	/*padding-right: (10/960)*100%;
+	padding-left: (10/960)*100%;*/
+	//width: ((@max-width - @gutter-width)/@max-width)*100%;
+	//max-width: (@max-width - @gutter-width)*1px;
+	overflow: hidden;}
+	
+#site-title {
+	margin-left: ((@gutter-width/2)/@max-width)*100%;
+	float: left;}
+	
+#site-nav-container {
+	margin: 0 auto 0 auto;
+	max-width: @max-width * 1px;
+	//padding-right: (10/960)*100%;
+	//padding-left: (10/960)*100%;
+	}
+	
+#site-nav-list {
+	padding-right: (10/960)*100%;
+	padding-left: (10/960)*100%;}
+	
+#hcard-Dan-Crabb{
+	color: #555555;
+	float: right;
+	font-size: 85%;
+	margin-right: ((@gutter-width/2)/@max-width)*100%;
+	padding-top: 4.1em;}
+	
+#hcard-Dan-Crabb abbr {
+	color: @brown;
+	font-weight: bold;}
+	
+#hcard-Dan-Crabb a {
+	color: #555555;}
+	
+#hcard-Dan-Crabb .addressDivider {
+	color: #cccccc;}
+
+.nav-list-item {
+		width: (((@column-width * 2)+@gutter-width)/(@max-width - @gutter-width))*100%;
+	margin-right: (@gutter-width/(@max-width - @gutter-width))*100%;}
+	
+h1 {
+	border-bottom: 1px solid #cccccc;
+	color: #555555;
+	font-size: 1.8em;
+	font-style: normal;
+	font-weight: normal;
+	margin: 0 0 0.5em 0;
+	padding-bottom: 0.2em;}
+	
+h2 {
+	color: @brown;
+	margin-bottom: 0.5em;}
+
+
+#homepage .container {
+	margin-top: 2.5em;}
+	
+#homepage-bullets {
+	@target: (8*@column-width)+(7*@gutter-width);
+	@context: @max-width - @gutter-width;
+	@w: (@target/@context)*100%;
+	float: left;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: @w;}
+	
+#homepage-bullets li {
+	font-size: 1.5em;
+	line-height: 1.4em;
+	margin-bottom: 1.5em;}
+	
+#homepage-bullets li.call {
+	font-size: 1.1em;}
+
+#homepage-main-image {
+	float: right;
+	position: static;}
+	
+#homepage-main-image {
+
+	@target: (8*@column-width) + (7*@gutter-width);
+	@context: @max-width - @gutter-width;
+	@w: (@target/@context)*100%;
+	@padding: 3;
+	background-color: @brown;	
+	//left: 0;
+	//overflow: hidden;
+	//padding: (@padding/@context)*100%;	
+	//position: absolute;
+	//top: 0;
+	//width: @w;
+	//width: ((@target - (@padding*2))/@context)*100%;
+	width: @w;
+	}
+	
+.homepage-thumbnail {
+	//float: left;
+	background-color: @body-background-color;
+	//display: block;
+	@padding: 3;
+	@target: (8*@column-width) + (7*@gutter-width);
+	@context: (8*@column-width) + (7*@gutter-width);
+	@w: ((@target - (@padding*2))/@context)*100%;
+	margin: 0;
+	padding: 0;
+	//padding: (@padding/@context)*100%;
+	//width: @w;
+	//position: absolute;
+	//top: 0;
+	}
+	
+.homepage-thumbnail figcaption {
+	background-color: #222222;
+	color: #ffffff;
+	display: block;
+	height: 1.4em;
+	margin-top: -2.15em;
+	padding: 0.4em;
+	opacity: 0.7;
+	//width: 100%;
+	}
+	
+	
+#homepage-main-image img {
+	display: block;
+	width: 100%;}
+	
+.service-intro {
+	@gutter: (@gutter-width/@max-width)*100%;
+	margin-right: @gutter/2;
+	margin-left: @gutter/2;}
+	
+.service-intro p {
+	//font-size: 1em;
+	}
+
+.service-section {
+	//background-color: #dddddd;
+	clear: both;
+	margin-bottom: 1.5em;
+	@gutter: (@gutter-width/@max-width)*100%;
+	margin-right: @gutter/2;
+	margin-left: @gutter/2;	
+	overflow: hidden;}
+	
+.service-image {
+	@target: 400;
+	@context: @max-width - @gutter-width;
+	@width: (@target/@context) * 100%;
+	//@padding: (0.5/@target) * 100%;
+	//@w: @width - (@padding*2);
+	@padding: 3;
+	padding: (@padding/@context)*100%;
+	//background-color: #dddddd;
+	background-color: @brown;
+	float: left;
+	margin-right: (@gutter-width/@context)*100%;
+	//padding: @padding;
+	//width: @w;
+	width: ((@target - (@padding*2))/@context)*100%;
+	
+	//width: @width;
+	}
+	
+.service-image img {
+	//@target: 399;
+	@target: 400;
+	@context: 400;
+	@max-width: (@target/@context)*100%;
+	//@padding: (8/@target) * 100%;
+	@padding: 0;
+	background-color: #ffffff;
+	@mw: @max-width - (@padding*2);
+	display: block;
+	margin: auto;
+	max-width: @mw;
+	padding: @padding;}
+	
+.service-description {
+	@context: @max-width - @gutter-width;
+	float: left;
+	width: ((@context - (400 + @gutter-width))/@context) * 100%;}
+	
+.service-section h2 {
+	color: @brown;
+	//display: inline-block;
+	display: inline;
+	@context: @max-width - @gutter-width;
+	@width: ((@context - (400 + @gutter-width))/@context) * 100%;
+	margin-bottom: 0.8em;
+	width: @width;}
+
+.container{
+	//padding-right: (10/960)*100%;
+	//padding-left: (10/960)*100%;
+	overflow: hidden;
+	padding-right: ((@gutter-width/2)/@max-width)*100%;
+	padding-left: ((@gutter-width/2)/@max-width)*100%;}
+	
+.gallery-intro {
+	//padding-right: (10/960)*100%;
+	//padding-left: (10/960)*100%;
+	}
+	
+.gallery {
+	clear: both;
+	margin-bottom: 2em;
+	//padding-right: (10/960)*100%;
+	//padding-left: (10/960)*100%;
+	overflow: hidden;}
+	
+.gallery-thumbnail {
+	@target: (@column-width*4)+(@gutter-width*3);
+	@context: @max-width - @gutter-width;
+	@margin: (@gutter-width/@context)*100%;
+	@padding: 3;
+	//display: inline-block;
+	background-color: @brown;
+	cursor: -moz-zoom-in, -webkit-zoom-in;	
+	float: left;
+	/*min-height: 245px;	*/
+	//min-height: 200px;
+	margin-top: 0;
+	margin-right: @margin;
+	margin-bottom: @margin;
+	margin-left: 0;
+	//padding: 0;
+	padding: (@padding/@context)*100%;
+	position: relative;
+	vertical-align: top;
+	width: ((@target - (@padding*2))/@context)*100%;}
+	
+.gallery-thumbnail:hover {
+	background-color: lighten(@brown, 15%);}
+	
+//.gallery-thumbnail.last, .gallery figure:nth-child(4n+4) {
+ .gallery figure:nth-child(4n+4) {
+	margin-right: 0;}
+
+.gallery-thumbnail.last {
+	margin-right: 0;}
+	
+.gallery-thumbnail figcaption {
+	background-color: #585858;
+	color: #ffffff;
+	//display: none;
+	display: none;
+	font-size: 90%;
+	left: 0;
+	padding: 0.4em;
+	position: absolute;
+	top: 0;
+	opacity: 0.95;
+	width: 96%;}
+
+.gallery-thumbnail a img {
+	border: none;}
+	
+.gallery-thumbnail a:hover {
+	background-color: transparent;}
+	
+.gallery-thumbnail img {
+	display: block;
+	max-width: 100%;
+	width: 100%;}
+	
+#fancybox-close, #fancybox-left, #fancybox-right {
+	border-bottom: none;}

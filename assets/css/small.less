@@ -1,0 +1,123 @@
+@import 'common.less';
+@max-width: 440;
+@gutter-width: 10;
+@column-width: 100;
+
+#small {
+	display: inline;}
+	
+#standard {
+	display: none;}
+
+// Apply style to the test element to show that it's the small size
+#test {
+	text-align: left;}
+	
+// Some padding on header, footer and main content
+#site-header, #site-footer, #main-content {
+	margin: 0 auto 0 auto;
+	max-width: @max-width * 1px;
+	//padding: 0 5% 0 5%;
+	//width: 90%;
+	}
+	
+#site-title {
+	margin-left: ((@gutter-width/2)/@max-width)*100%;}	
+
+#site-nav-container {
+	//padding-right: 1em;
+	//padding-left: 1em;
+	}
+	
+#site-nav-list {
+	margin: auto;
+	max-width: @max-width;}
+	
+#site-nav-container {
+	margin: 0 auto 0 auto;
+	max-width: @max-width * 1px;}
+	
+#site-nav-list {
+	padding-right: ((@gutter-width/2)/@max-width)*100%;
+	padding-left: ((@gutter-width/2)/@max-width)*100%;}	
+	
+.service-image img {
+	width: 100%;}
+	
+h1 {
+	color: @brown;
+	font-size: 1.4em;
+	margin: 0.5em 0 0.5em 0;}
+	
+h2 {
+	background-color: #585858;
+	color: #ffffff;
+	font-size: 1em;
+	padding: 0.2em 0.5em 0.3em 0.5em;}
+	
+.container{
+	padding-right: ((@gutter-width/2)/@max-width)*100%;
+	padding-left: ((@gutter-width/2)/@max-width)*100%;}
+	
+// Gallery styles
+
+.gallery {
+	overflow: hidden;}
+
+figcaption {
+	display: none;}
+
+.gallery-thumbnail {
+	@container-width: @max-width - @gutter-width;
+	@margin-width: (@gutter-width/@max-width)*100%;
+	@thumbnail-width: (100/@container-width)*100%;
+	display: block;
+	float: left;
+	margin: 0 @margin-width @margin-width 0;
+	overflow: hidden;
+	padding: 0;
+	//width: 100px;
+	width: @thumbnail-width;}
+
+//.gallery figure:nth-child(4n+4) {
+//	margin-right: 0;}
+
+.gallery-thumbnail.last {
+	margin-right: 0;}
+	
+.gallery-thumbnail img {
+	display: block;
+	width: 100%;}
+
+.zoom {
+	position: relative;}
+	
+.zoom img {
+	width: 100%;}
+	
+.zoom-caption {
+	@padding: ((0.5*@gutter-width)/(@max-width - @gutter-width))*100%;
+	background-color: #222222;
+	bottom: 4px;
+	color: #ffffff;
+	font-family: arial,helvetica,sans-serif;
+	left: 0px;
+	margin-bottom: 0;
+	opacity: 0.8;
+	padding: @padding;
+	position: absolute;
+	width: 100% - (2*@padding);}
+	
+.zoom-close {
+	background-image: url(../images/fancy_close.png);
+	color: #ffffff;
+	cursor: pointer;
+	height: 30px;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	width: 30px;}
+	
+.zoom-close span {
+	left: -10000px;
+	position: absolute;}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Width test - no scrollbars</title>
+  <style type="text/css">
+  #eightHundred {display: none;}
+  @media screen and (min-width: 800px){
+    #eightHundred {
+		display: block;}
+    }
+  </style>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('#js').append('document.documentElement.clientWidth: ' + document.documentElement.clientWidth);
+	});
+  </script>
+</head>
+<body>
+  <h2>What CSS thinks</h2>
+  <div id="eightHundred">If you can see me, the viewport must be 800px or wider</div>
+  
+  <h2>What JavaScript thinks</h2>
+  <div id="js"></div>
+</body>
+</html>

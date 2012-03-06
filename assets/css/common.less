@@ -1,0 +1,116 @@
+// Some common variables
+@brown: #6B3513;
+@body-background-color: #fcfcfc;
+@body-font: Lora,georgia,times,serif;
+
+// Mixins
+.nobullets {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;}
+
+// Set HTML5 elements to display block
+article,aside,figure,figcaption,footer,header,nav,section{
+	display: block;}
+
+// Set heading margins and padding to 0
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;}
+	
+p {
+	font-size: 90%;
+	line-height: 1.5em;
+	margin: 0 0 1.5em 0;}	
+	
+// Style the body tag
+body {
+	background-image: url(../images/wood-bg6.jpg);
+	background-repeat: repeat-x;
+	color: #222222;
+	font-family: @body-font;
+	font-size: 100%;
+	margin: 0;}
+
+// Link styling
+a {
+	border-bottom: 1px solid #8A461C;
+	color: #8A461C;
+	padding-bottom: 0.05em;
+	text-decoration: none;}
+	
+a:hover {
+	background-color: #F7EEE6;
+	color: #6B3513;}
+	
+a img {
+	border: none;}
+	
+// Style for the container element
+#document {
+	background-color: @body-background-color;
+	background-image: url(../images/wood-bg6.jpg);
+	background-position: bottom;
+	background-repeat: repeat-x;	
+	//margin: 1em auto 0.5em auto;
+	margin: 1em auto 0 auto;
+	padding-bottom: 40px;}
+	
+	
+// Main site title
+#site-title {
+	color: #6B3513;
+	font-size: 2em;
+	font-weight: normal;
+	line-height: 1.1;
+	margin-bottom: 0.5em;
+	padding-top: 0.5em;}
+	
+#site-title-descriptor {
+	color: #888888;
+	display: block;
+	font-size: 70%;
+	font-weight: bold;}
+	
+// Site navigation
+#site-nav {
+	border-top: 1px solid @brown;
+	border-bottom: 1px solid @brown;
+	margin: 0.5em 0 1em 0;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	width: 100%;}
+
+#site-nav-list {
+	.nobullets;
+	margin-left: auto;
+	margin-right: auto;	
+	overflow: hidden;}
+	
+.nav-list-item {
+	color: @brown;
+	display: block;
+	float: left;
+	margin-right: 1em;}
+	
+/* Common address styling */
+
+.fn.org {
+	display: none;}
+	
+.address-line.tel .type {
+	display: none;}
+	
+.vcard a {
+	border-bottom: none;}
+	
+.vcard abbr {
+	border-bottom: none;}
+	
+.device-class {
+	display: none;}
+	
+	
+.current-page-link {
+	color: #888888;
+	font-weight: bold;}
