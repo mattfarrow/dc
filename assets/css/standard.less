@@ -100,8 +100,29 @@ h2 {
 	margin: 0;
 	padding: 0;
 	width: @w;}
+
+#homepage-main-text {
+	@target: (8*@column-width)+(7*@gutter-width);
+	@context: @max-width - @gutter-width;
+	@w: (@target/@context)*100%;
+	float: left;
+	min-height: 22em;
+	width: @w;}	
 	
-#homepage-bullets li {
+.homepage-intro {
+	font-size: 1.1em;
+	margin-bottom: 0.8em;}
+	
+.homepage-bullets{
+	margin: 0 0 2.5em 0;
+	padding: 0 0 0 1em;}
+	
+.homepage-bullets li {
+	font-size: 1.1em;
+	line-height: 1.2em;
+	margin-bottom: 0.5em;}
+	
+#homepage-bullets li{
 	font-size: 1.5em;
 	line-height: 1.4em;
 	margin-bottom: 1.5em;}
